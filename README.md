@@ -33,5 +33,3 @@ while True:
             print(f'@{g}')
 
 Thread(target=asyncio.run, args=run_bot).start()
-
-Thread(target=asyncio.run, args=run_bot).start()
