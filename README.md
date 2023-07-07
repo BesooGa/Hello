@@ -1,20 +1,10 @@
 from pyrogram import Client
 from pyrogram.raw import functions,types
-from threading import Thread 
 from pyrogram.errors import UsernameNotOccupied
 import time,requests
 from datetime import datetime
 app = Client("admin",api_id=9212418,api_hash="d783f8ce3d816448d29c4cc2258f838a")
-
-
-def run_bot():
-    app.start()
-    print("Bot Started")
-    idle()
-    print("Bot Stopped")
-    app.stop()
-
-
+app.start()
 admin = input("Enter Admin UserName : @")#يوزرك
 g = input("Enter Target UserName : @")
 while True:
@@ -31,5 +21,3 @@ while True:
         else:
             req.text.find('Send Message <a class="tgme_action_button_new"') >= 0
             print(f'@{g}')
-
-Thread(target=asyncio.run, args=run_bot).start()
